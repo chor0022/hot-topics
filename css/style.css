@@ -5,21 +5,19 @@ Colors used:
 - Text color: black (#000000)
 */
 
-
 body {
   margin: 0;
   font-family: 'Montserrat', Arial, Helvetica, sans-serif;
   line-height: 1.5;
   background-color: #FFDE21; 
+  color: #000000;
 }
-
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Crimson Text', Georgia, serif;
   margin-top: 0;
   color: #000000; 
 }
-
 
 header {
   background-color: #000000;
@@ -35,12 +33,10 @@ footer {
   text-align: center;
 }
 
-
 .logo-container {
   text-align: center;
   margin-bottom: 1rem; 
 }
-
 
 .logo {
   display: inline-flex;
@@ -52,7 +48,6 @@ footer {
   justify-content: center;
   position: relative;
 }
-
 
 .logo span {
   position: relative;
@@ -102,7 +97,6 @@ nav a:hover {
   text-decoration: none;
 }
 
-
 .masthead {
   background: url("../img/masthead.jpg") center/cover no-repeat;
   padding: 2rem;
@@ -116,32 +110,32 @@ nav a:hover {
   font-weight: 700;
 }
 
-
 main {
   max-width: 1200px;
   margin: auto;
   padding: 1rem;
 }
 
-
 article {
   margin-bottom: 2rem;
   display: flex;
   gap: 1rem;
   align-items: flex-start;
+  flex-wrap: wrap; 
 }
 
 article figure {
-  flex: 0 0 40%;
+  flex: 0 0 40%; 
+  max-width: 40%;
   margin: 0;
 }
 
 article img {
-  width: 400px;
-  height: 400px;
+  width: 100%; 
+  height: auto; 
   object-fit: cover;
   border-radius: 5px;
-  border: 2px solid #000000; 
+  border: 2px solid #000000;
 }
 
 article figcaption {
@@ -152,13 +146,12 @@ article figcaption {
 }
 
 article p {
-  flex: 1;
+  flex: 1; 
   text-align: left;
   font-size: 1rem;
   color: #000000;
   font-family: 'Montserrat', Arial, Helvetica, sans-serif;
 }
-
 
 .portfolio {
   display: grid;
@@ -174,19 +167,19 @@ article p {
   background-color: #FFDE21; 
   text-align: center;
   box-shadow: 0 2px 4px rgba(200,255,33,0.3); 
-  width: 300px;
+  max-width: 300px;
   margin: auto;
   box-sizing: border-box;
 }
 
 .card img {
-  width: 300px;
-  height: 300px;
+  width: 100%;  
+  height: auto; 
   object-fit: cover;
   border-radius: 5px 5px 0 0;
   display: block;
   margin: 0 auto;
-  border-bottom: 2px solid #000000; 
+  border-bottom: 2px solid #000000;
 }
 
 .card p {
@@ -197,6 +190,7 @@ article p {
   word-wrap: break-word;
   color: #000000;
 }
+
 
 footer .social a {
   color: #FFDE21;
@@ -222,28 +216,41 @@ html {
 
 @media (min-width: 35rem) {
   html { font-size: 1rem; }
-  nav { display: flex; justify-content: center; }
+  
+  nav {
+    display: flex;
+    justify-content: center;
+  }
+  
   article {
     display: flex;
     gap: 1rem;
     align-items: flex-start;
   }
+  
   article figure {
     flex: 0 0 40%;
+    max-width: 40%;
   }
+  
   article p {
     flex: 1;
     text-align: left;
   }
+  
   .portfolio {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr; 
     justify-content: center;
   }
 }
 
 @media (min-width: 80rem) {
   html { font-size: 1.25rem; }
-  main { text-align: left; }
+  
+  main {
+    text-align: left;
+  }
+  
   .portfolio {
     grid-template-columns: 1fr 1fr 1fr;
     justify-content: center;
@@ -254,13 +261,16 @@ html {
   article {
     flex-direction: column;
   }
+  
   .portfolio {
     grid-template-columns: 1fr;
   }
+  
   nav {
     flex-direction: column;
     align-items: center;
   }
+  
   nav a {
     margin: 0.3rem 0;
   }
